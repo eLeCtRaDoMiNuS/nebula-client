@@ -1,3 +1,7 @@
+pcall(function()
+getgenv().rconsoleprint = g
+end) 
+
 --nebula made by npm#0001 and errol#0001
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until shared.GuiLibrary
