@@ -13,6 +13,7 @@ local COB = function(tab, argstable)
 end
 
 
+
 function notify(text)
     local frame = GuiLibrary["CreateNotification"]("Notification", text, 5, "assets/WarningNotification.png")
     frame.Frame.Frame.ImageColor3 = Color3.fromRGB(255, 64, 64)
@@ -51,6 +52,43 @@ local AnticheatDisabler = COB("Blatant", {
     HoverText = "Small Distance Only"
 })
 
+local AutoWin = COB("Utility", {
+	["Name"] = "RageAutoWin",
+	["Function"] = function(callback)
+		if callback then
+			pcall(function()
+                game.Workspace.Gravity = 0
+                for i,v in pairs(game.Players:GetPlayers()) do
+                    if v.Team == game:GetService("Players").LocalPlayer.Team and v ~= game:GetService("Players").LocalPlayer then
+                        v:Destroy()
+                    end
+                 end
+local Players = game:GetService("Players")
+getgenv().Autowin = true
+while getgenv().Autowin do
+   for _,v in pairs(Players:GetPlayers()) do
+       if v.Character and v.Character:FindFirstChildOfClass("Humanoid") and v.Character.Humanoid.Health ~= 0 and v ~= Players.LocalPlayer then
+           repeat
+               Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+               task.wait(0.2)
+           until v.Character.Humanoid.Health <= 0
+       end
+   end
+   task.wait()
+end
+			end)
+		else
+			pcall(function()
+                getgenv().Autowin = false
+                game.Workspace.Gravity = 196.2
+				print("disabled autowin")
+			end)
+		end
+	end,
+	["Default"] = false,
+	["HoverText"] = "works only with disabler"
+})		
+		
 local AnticheatDisabler = COB("World", {
     Name = "OldAntiVoid",
     Function = function(callback) 
