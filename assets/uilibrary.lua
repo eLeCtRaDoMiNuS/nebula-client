@@ -52,42 +52,7 @@ local AnticheatDisabler = COB("Blatant", {
     HoverText = "Small Distance Only"
 })
 
-local AutoWin = COB("Utility", {
-	["Name"] = "RageAutoWin",
-	["Function"] = function(callback)
-		if callback then
-			pcall(function()
-                game.Workspace.Gravity = 0
-                for i,v in pairs(game.Players:GetPlayers()) do
-                    if v.Team == game:GetService("Players").LocalPlayer.Team and v ~= game:GetService("Players").LocalPlayer then
-                        v:Destroy()
-                    end
-                 end
-local Players = game:GetService("Players")
-getgenv().Autowin = true
-while getgenv().Autowin do
-   for _,v in pairs(Players:GetPlayers()) do
-       if v.Character and v.Character:FindFirstChildOfClass("Humanoid") and v.Character.Humanoid.Health ~= 0 and v ~= Players.LocalPlayer then
-           repeat
-               Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
-               task.wait(0.2)
-           until v.Character.Humanoid.Health <= 0
-       end
-   end
-   task.wait()
-end
-			end)
-		else
-			pcall(function()
-                getgenv().Autowin = false
-                game.Workspace.Gravity = 196.2
-				print("disabled autowin")
-			end)
-		end
-	end,
-	["Default"] = false,
-	["HoverText"] = "works only with disabler"
-})		
+
 		
 local AnticheatDisabler = COB("World", {
     Name = "OldAntiVoid",
@@ -276,17 +241,38 @@ local AnticheatDisabler = COB("Blatant", {
     Name = "KillAll",
     Function = function(callback) 
         if callback then
-					
-        	for i,v in pairs(game.Players:GetChildren()) do
-    if v ~= game.Players.LocalPlayer then
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.Head.CFrame * CFrame.new(0,0,.4)
-         wait(3)
-    end
+		pcall(function()
+                game.Workspace.Gravity = 0
+                for i,v in pairs(game.Players:GetPlayers()) do
+                    if v.Team == game:GetService("Players").LocalPlayer.Team and v ~= game:GetService("Players").LocalPlayer then
+                        v:Destroy()
+                    end
+                 end
+local Players = game:GetService("Players")
+getgenv().Autowin = true
+while getgenv().Autowin do
+   for _,v in pairs(Players:GetPlayers()) do
+       if v.Character and v.Character:FindFirstChildOfClass("Humanoid") and v.Character.Humanoid.Health ~= 0 and v ~= Players.LocalPlayer then
+           repeat
+               Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+               task.wait(0.2)
+           until v.Character.Humanoid.Health <= 0
+       end
+   end
+   task.wait()
 end
-        end
+			end)
+		else
+			pcall(function()
+                getgenv().Autowin = false
+                game.Workspace.Gravity = 196.2
+				print("disabled autowin")
+			end)
+		end
+        
     end,
     Default = false,
-    HoverText = "requires ac disabler and killaura"
+    HoverText = "UPDATED requires ac disabler and killaura"
 })
 
 local AnticheatDisabler = COB("Render", {
@@ -2096,12 +2082,34 @@ local playerlist = game:GetService("CoreGui"):FindFirstChild("PlayerList")
 		Name = "AutoWin(skywars)",
 		Function = function(callback) 
 			if callback then
-				for i, v in pairs(Game.Players:GetChildren()) do
-					if not v.Character then return end
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
-					wait(3)
-					end
-			end
+				pcall(function()
+                game.Workspace.Gravity = 0
+                for i,v in pairs(game.Players:GetPlayers()) do
+                    if v.Team == game:GetService("Players").LocalPlayer.Team and v ~= game:GetService("Players").LocalPlayer then
+                        v:Destroy()
+                    end
+                 end
+local Players = game:GetService("Players")
+getgenv().Autowin = true
+while getgenv().Autowin do
+   for _,v in pairs(Players:GetPlayers()) do
+       if v.Character and v.Character:FindFirstChildOfClass("Humanoid") and v.Character.Humanoid.Health ~= 0 and v ~= Players.LocalPlayer then
+           repeat
+               Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+               task.wait(0.2)
+           until v.Character.Humanoid.Health <= 0
+       end
+   end
+   task.wait()
+end
+			end)
+		else
+			pcall(function()
+                getgenv().Autowin = false
+                game.Workspace.Gravity = 196.2
+				print("disabled autowin")
+			end)
+		end
 		end,
 		Default = false,
 		HoverText = false
