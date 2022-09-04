@@ -131,7 +131,7 @@ local AnticheatDisabler = COB("Render", {
 })
 
 local AnticheatDisabler = COB("World", {
-    Name = "Shaders",
+    Name = "Nebula Theme",
     Function = function(callback) 
         if callback then
 
@@ -184,6 +184,12 @@ for i,v in pairs(lighting:GetChildren()) do
     getgenv().oldLighting["Technology"] = gethiddenproperty(lighting, "Technology")
 end
     local Bloom = lighting:FindFirstChild("EngoShaders_Bloom") or Instance.new("BloomEffect", lighting)
+    game[LightingName].Sky.SkyboxBk = "rbxassetid://5359993882"
+    game[LightingName].Sky.SkyboxDn = "rbxassetid://5359993882"
+    game[LightingName].Sky.SkyboxFt = "rbxassetid://5359993882"
+    game[LightingName].Sky.SkyboxLf = "rbxassetid://5359993882"
+    game[LightingName].Sky.SkyboxRt = "rbxassetid://5359993882"
+    game[LightingName].Sky.SkyboxUp = "rbxassetid://5359993882"
     local ColorCorrection = lighting:FindFirstChild("EngoShaders_ColorCorrection") or Instance.new("ColorCorrectionEffect", lighting)
     getgenv().shaders["Bloom"] = Bloom 
     getgenv().shaders["ColorCorrection"] = ColorCorrection
