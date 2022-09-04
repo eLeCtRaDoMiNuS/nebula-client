@@ -1,7 +1,3 @@
-pcall(function()
-getgenv().rconsoleprint = g
-end) 
-
 --nebula made by npm#0001 and errol#0001
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until shared.GuiLibrary
@@ -12,7 +8,21 @@ local COB = function(tab, argstable)
     return GuiLibrary["ObjectsThatCanBeSaved"][tab.."Window"]["Api"].CreateOptionsButton(argstable)
 end
 
+pcall(function()
+getgenv().rconsoleprint = g
+end) 
 
+function securefunc(func)
+	task.spawn(function()
+		spawn(function()
+			pcall(function()
+				loadstring(
+					func()
+				)()
+			end)
+		end)
+	end)
+end
 
 function notify(text)
     local frame = GuiLibrary["CreateNotification"]("Notification", text, 5, "assets/WarningNotification.png")
