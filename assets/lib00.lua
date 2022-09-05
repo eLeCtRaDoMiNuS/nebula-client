@@ -1,4 +1,4 @@
---nebula made by npm#0001 and errol#0001
+--nebula private made by npm#0001
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until shared.GuiLibrary
 local GuiLibrary = shared.GuiLibrary
@@ -34,22 +34,7 @@ function boxnotify(text)
      end
 end
 
-local hckrdtcplyrs = game.Players
 
-local AnticheatDisabler = COB("Utility", {
-    Name = "HackerDetector",
-    Function = function(callback) 
-        if callback then
-            if hckrdtcplyrs.WalkSpeed > 21 then
-                infonotify("Hacker Detector", hckrdtcplyrs.Name"is hacking!", "5")
-            end
-        else
-            return;
-        end
-    end,
-    Default = false,
-    HoverText = "Hacker Detector"
-})
 
 local AnticheatDisabler = COB("World", {
     Name = "Shaders",
@@ -2270,20 +2255,28 @@ runcode(function()
 	})
 end)
 
-local hckrdtcplyrs = game.Players    
+local Players = game:GetService("Players")
+local lPlayer = Players.LocalPlayer
 
-local hackerdetector = COB("Utility", {
-    Name = "HackerDetector",
-    Function = function(callback) 
-        if callback then
-            if hckrdtcplyrs.WalkSpeed > 21 then
-                infonotify("Hacker Detector", hckrdtcplyrs.Name"is hacking!", "5")
-            end
-        else
-            return;
-        end
-    end,
-    Default = false,
-    HoverText = "Hacker Detector"
-})
+local function wsDetector(plr,hmoid,relativespeed)
+    if relativespeed > 21 then
+        infonotify("Nebula Hacker Detector","Detected unusual walkspeed in player '"..plr.Name.."'/'"..plr.DisplayName.."' (Walkspeed: "..relativespeed..")")
+    end
+end
 
+for i,v in pairs(Players:GetPlayers()) do
+    if player == lPlayer then
+        continue
+    end
+    local Char = v.Character or v.CharacterAdded:Wait()
+    local CharacterHumanoid = Char:FindFirstChildWhichIsA("Humanoid")
+    CharacterHumanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(wsDetector(v,CharacterHumanoid,CharacterHumanoid.WalkSpeed))
+end
+
+Players.PlayerAdded:Connect(function(v)
+    if v.Name ~= lPlayer.Name then
+        local Char = v.Character or v.CharacterAdded:Wait()
+        local CharacterHumanoid = Char:FindFirstChildWhichIsA("Humanoid")
+        CharacterHumanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(wsDetector(v,CharacterHumanoid,CharacterHumanoid.WalkSpeed))
+    end
+end)
