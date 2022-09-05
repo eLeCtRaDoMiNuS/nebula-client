@@ -2260,10 +2260,12 @@ local lPlayer = Players.LocalPlayer
 
 local function wsDetector(plr,hmoid,relativespeed)
     if relativespeed > 21 then
-        infonotify("Nebula Hacker Detector","Detected unusual walkspeed in player '"..plr.Name.."'/'"..plr.DisplayName.."' (Walkspeed: "..relativespeed..")")
+        infonotify("Detected unusual walkspeed in player '"..plr.Name.."'/'"..plr.DisplayName.."' (Walkspeed: "..relativespeed..")")
     end
 end
 
+
+wait(0.1)
 for i,v in pairs(Players:GetPlayers()) do
     if player == lPlayer then
         continue
