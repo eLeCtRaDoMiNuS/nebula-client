@@ -2283,3 +2283,64 @@ Players.PlayerAdded:Connect(function(v)
     end
 end)
 end
+
+runcode(function()
+	local funnyfly = {["Enabled"] = false}
+	local flyacprogressbar
+	local flyacprogressbarframe
+	local flyacprogressbarframe2
+	local flyacprogressbartext
+	local bodyvelo
+	funnyfly = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "FunnyFly",
+		["Function"] = function(callback)
+			if callback then 
+				local starty
+				local starttick = tick()
+				task.spawn(function()
+					local timesdone = 0
+					if GuiLibrary["ObjectsThatCanBeSaved"]["SpeedModeDropdown"]["Api"]["Value"] == "CFrame" then
+						repeat
+							timesdone = timesdone + 1
+							if entity.isAlive then
+								local root = entity.character.HumanoidRootPart
+								if starty == nil then 
+									starty = root.Position.Y
+								end
+								if not bodyvelo then 
+									bodyvelo = Instance.new("BodyVelocity")
+									bodyvelo.MaxForce = Vector3.new(0, 1000000, 0)
+									bodyvelo.Parent = root
+								else
+									bodyvelo.Parent = root
+								end
+								for i = 1, 15 do 
+									task.wait(0.01)
+									if (not funnyfly["Enabled"]) then break end
+									bodyvelo.Velocity = Vector3.new(0, i * 0.7, 0)
+								end
+								if (not isnetworkowner(root)) then
+									local timecalc = math.floor((tick() - starttick) * 10) / 10
+									createwarning("FunnyFly", "lasted "..timecalc.."s", 5)
+									break 
+								end
+							else
+								break
+							end
+						until (not funnyfly["Enabled"])
+					else
+						createwarning("FunnyFly", "funny fly only works with cframe", 5)
+					end
+					if funnyfly["Enabled"] then 
+						funnyfly["ToggleButton"](false)
+					end
+				end)
+			else
+				if bodyvelo then 
+					bodyvelo:Destroy()
+					bodyvelo = nil
+				end
+			end
+		end
+	})
+end)
