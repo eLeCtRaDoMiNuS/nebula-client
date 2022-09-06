@@ -1,4 +1,4 @@
---nebula made by npm and kylee
+--nebula private made by npm and kylee
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until shared.GuiLibrary
 local GuiLibrary = shared.GuiLibrary
@@ -964,7 +964,7 @@ function checklagback()
 	return isnetworkowner(hrp)
 end
 
-infonotify("Nebula Client", "Loaded", 5)
+infonotify("Nebula Client", "Private Version Loaded", 5)
 
 local CustomFly = COB("Blatant", {
 	["Name"] = "CustomFly",
