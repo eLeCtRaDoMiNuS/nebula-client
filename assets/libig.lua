@@ -269,7 +269,7 @@ end
         
     end,
     Default = false,
-    HoverText = "UPDATED requires ac disabler and killaura"
+    HoverText = "UPDATED requires ff disabler and killaura"
 })
 
 local AnticheatDisabler = COB("Render", {
@@ -514,17 +514,6 @@ end)
     HoverText = "Risky Inf Jump"
 })
 
-local AnticheatDisabler = COB("Utility", {
-    Name = "Client Anticheat Disabler",
-    Function = function(callback) 
-        if callback then
-       loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cesare0328/my-scripts/main/joke%20anticheat.lua'),true))()
-
-        end
-    end,
-    Default = false,
-    HoverText = "Deletes root part, client only."
-})
 
 local AnticheatDisabler = COB("Render", {
     Name = "NickHider",
@@ -575,7 +564,7 @@ game.DescendantAdded:connect(newobj)
 })
 
 local AnticheatDisabler = COB("World", {
-    Name = "Load da Rektsky",
+    Name = "LoadRektsky",
     Function = function(callback) 
         if callback then
          loadstring(game:HttpGet("https://raw.githubusercontent.com/8pmX8/rektsky4roblox/main/mainscript.lua"))()
@@ -822,17 +811,6 @@ local AnticheatDisabler = COB("Blatant", {
     HoverText = false
 })
 
-local AnticheatDisabler = COB("World", {
-    Name = "Whitelists (in console)",
-    Function = function(callback) 
-        if callback then
-       print ("Whitelisted!")
-        end
-    end,
-    Default = false,
-    HoverText = "ok"
-})
-
 COB("Blatant", {
     Name = "Flightv2",
 	HoverText = "v2",
@@ -993,7 +971,7 @@ local CustomFly = COB("Blatant", {
 	["HoverText"] = "Uses bypasses to fly"
 })
 local AnticheatDisabler = COB("Utility", {
-	["Name"] = "AnticheatDisabler",
+	["Name"] = "ForceFieldDisabler",
 	["Function"] = function(callback)
 		if callback then
 			pcall(function()
