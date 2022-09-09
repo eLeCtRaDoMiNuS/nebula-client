@@ -34,7 +34,7 @@ function boxnotify(text)
      end
 end
 
-local AnticheatDisabler = COB("World", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "Shaders",
     Function = function(callback) 
         if callback then
@@ -128,7 +128,7 @@ shared.Check = true
     HoverText = "Private Shader"
 })
 
-local AnticheatDisabler = COB("Blatant", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "PingFlight",
     Function = function(callback) 
         if callback then
@@ -143,7 +143,7 @@ local AnticheatDisabler = COB("Blatant", {
 
 
 		
-local AnticheatDisabler = COB("World", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "OldAntiVoid",
     Function = function(callback) 
         if callback then
@@ -169,7 +169,7 @@ local AnticheatDisabler = COB("World", {
 })
 
 local BoostAirJump = {["Enabled"] = false}
-BoostAirJump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+BoostAirJump = GuiLibrary["ObjectsThatCanBeSaved"]["NebulaWindow"]["Api"].CreateOptionsButton({
     ["Name"] = "BoostAirJump",
     ["Function"] = function(callback)
         if callback then
@@ -185,7 +185,7 @@ BoostAirJump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].Creat
     ["HoverText"] = "Nebula Client"
 })
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "Ocean Lighting",
     Function = function(callback) 
         if callback then
@@ -197,7 +197,7 @@ local AnticheatDisabler = COB("Render", {
     HoverText = "Blue Themed Lighting"
 })
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "Red Lighting",
     Function = function(callback) 
         if callback then
@@ -211,7 +211,7 @@ local AnticheatDisabler = COB("Render", {
 
 
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "AestheticLighting",
     Function = function(callback) 
         if callback then
@@ -223,7 +223,7 @@ local AnticheatDisabler = COB("Render", {
     HoverText = "Cool Lighting "
 })
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "BigHead (requires rthro head)",
     Function = function(callback) 
         if callback then
@@ -234,7 +234,7 @@ local AnticheatDisabler = COB("Render", {
     HoverText = "FE BigHead"
 })
 
-local AnticheatDisabler = COB("Blatant", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "KillAll",
     Function = function(callback) 
         if callback then
@@ -272,7 +272,7 @@ end
     HoverText = "UPDATED requires ff disabler and killaura"
 })
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "HalloweenLighting",
     Function = function(callback) 
         if callback then
@@ -284,7 +284,7 @@ local AnticheatDisabler = COB("Render", {
     HoverText = "🎃"
 })
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "GooseQuote",
     Function = function(callback) 
         if callback then
@@ -334,7 +334,7 @@ end)
     HoverText = "Credit to spec#9001 for making it."
 })
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "OldRoblox",
     Function = function(callback) 
         if callback then
@@ -377,7 +377,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/lua-projects
     HoverText = "Changes Lighting And Textures To fit the old roblox style."
 })
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "ShrekLighting",
     Function = function(callback) 
         if callback then
@@ -401,7 +401,7 @@ local AnticheatDisabler = COB("Render", {
     HoverText = "ChillLighting"
 })
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "Sky",
     Function = function(callback) 
         if callback then
@@ -477,7 +477,7 @@ SunRays.Parent = game[LightingName]
     HoverText = "IMPORTANT! THIS WILL NOT WORK WITH WINTER THEME OR FULLBRIGHT TURN THOSE OFF!"
 })
 
-local AnticheatDisabler = COB("Utility", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "Chat-Crasher",
     Function = function(callback) 
         if callback then
@@ -498,7 +498,7 @@ end
     HoverText = "Risky Chat Disabler"
 })
 
-local AnticheatDisabler = COB("Blatant", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "Infinite Jump",
     Function = function(callback) 
         if callback then
@@ -515,7 +515,7 @@ end)
 })
 
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "NickHider",
     Function = function(callback) 
         if callback then
@@ -563,7 +563,7 @@ game.DescendantAdded:connect(newobj)
     HoverText = "Old Recreated Feature"
 })
 
-local AnticheatDisabler = COB("World", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "LoadRektsky",
     Function = function(callback) 
         if callback then
@@ -575,7 +575,7 @@ local AnticheatDisabler = COB("World", {
 })
 
 COB("Blatant", {
-    Name = "MoonInfCustomFLY",
+    Name = "NebulaWindow",
 	HoverText = "redid",
     Function = function(v)
         longjumpval = v
@@ -640,7 +640,7 @@ COB("Blatant", {
 })
 
 
-COB("Blatant", {
+COB("NebulaWindow", {
     Name = "AnticheatBFly",
 	HoverText = "Custom Flight",
     Function = function(v)
@@ -669,7 +669,7 @@ COB("Blatant", {
     end
 })
 
-local AnticheatDisabler = COB("Render", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "AestheticLightingV2",
     Function = function(callback) 
         if callback then
@@ -753,7 +753,7 @@ Lighting.ExposureCompensation = 0.5
     HoverText = "AestheticLightingV2"
 })
 
-local AnticheatDisabler = COB("World", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "UltraFPSBoost",
     Function = function(callback) 
         if callback then
@@ -800,7 +800,7 @@ end
     HoverText = "FPS Booster"
 })
 
-local AnticheatDisabler = COB("Blatant", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "Infinite Yield",
     Function = function(callback) 
         if callback then
@@ -811,7 +811,7 @@ local AnticheatDisabler = COB("Blatant", {
     HoverText = false
 })
 
-COB("Blatant", {
+COB("NebulaWindow", {
     Name = "Flightv2",
 	HoverText = "v2",
     Function = function(v)
@@ -840,7 +840,7 @@ COB("Blatant", {
     end
 })
 
-local AnticheatDisabler = COB("Blatant", {
+local AnticheatDisabler = COB("NebulaWindow", {
     Name = "InfiniteJump",
     Function = function(callback) 
         if callback then
@@ -861,8 +861,8 @@ local AnticheatDisabler = COB("Blatant", {
     HoverText = "jumps inf times"
 })
 
-local AnticheatDisabler = COB("World", {
-    Name = "funny",
+local AnticheatDisabler = COB("NebulaWindow", {
+    Name = "CatSky
     Function = function(callback) 
         if callback then
         if not game:IsLoaded() then
@@ -944,7 +944,7 @@ end
 
 infonotify("Nebula Client", "Private Version Loaded", 5)
 
-local CustomFly = COB("Blatant", {
+local CustomFly = COB("NebulaWindow", {
 	["Name"] = "CustomFly",
 	["Function"] = function(callback)
 		if callback then
@@ -970,7 +970,7 @@ local CustomFly = COB("Blatant", {
 	["Default"] = false,
 	["HoverText"] = "Uses bypasses to fly"
 })
-local AnticheatDisabler = COB("Utility", {
+local AnticheatDisabler = COB("NebulaWindow", {
 	["Name"] = "ForceFieldDisabler",
 	["Function"] = function(callback)
 		if callback then
@@ -1008,7 +1008,7 @@ AnticheatDisabler.CreateSlider({
     ["HoverText"] = "Delay",
     ["Default"] = 0.05
 })
-local KitExploit = COB("Utility", {
+local KitExploit = COB("NebulaWindow", {
 	["Name"] = "KitExploit",
 	["Function"] = function(callback)
 		if callback then
@@ -1067,7 +1067,7 @@ local KitExploit = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "Exploits Axolotl, Beast, Dasher, Fisherman, IceQueen and Santa kit settings"
 })
-local ItemExploit = COB("Utility", {
+local ItemExploit = COB("NebulaWindow", {
 	["Name"] = "ItemExploit",
 	["Function"] = function(callback)
 		if callback then
@@ -1106,7 +1106,7 @@ local ItemExploit = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "Exploits like 5 item settings settings"
 })
-local InfJump = COB("Utility", {
+local InfJump = COB("NebulaWindow", {
 	["Name"] = "InfJump",
 	["Function"] = function(callback)
 		if callback then
@@ -1133,7 +1133,7 @@ local InfJump = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "Makes you can jump infinetly"
 })
-local MageAnimation = COB("Render", {
+local MageAnimation = COB("NebulaWindow", {
 	["Name"] = "MageAnimation",
 	["Function"] = function(callback)
 		if callback then
@@ -1157,7 +1157,7 @@ local MageAnimation = COB("Render", {
 	["Default"] = false,
 	["HoverText"] = "Makes you get mage animation (FE)"
 })
-local SpamSwordSwing = COB("Combat", {
+local SpamSwordSwing = COB("NebulaWindow", {
 	["Name"]  = "SpamSwordSwing",
 	["Function"] = function(callback)
 		if callback then
@@ -1178,7 +1178,7 @@ local SpamSwordSwing = COB("Combat", {
 	["Default"] = false,
 	["HoverText"] = "Spam swings your sword"
 })
-local NoClickDelay = COB("Combat", {
+local NoClickDelay = COB("NebulaWindow", {
 	["Name"]  = "NoClickDelay",
 	["Function"] = function(callback)
 		if callback then
@@ -1212,7 +1212,7 @@ local NoClickDelay = COB("Combat", {
 	["Default"] = false,
 	["HoverText"] = "Spam swings your sword"
 })
-local AnimDisabler = COB("Utility", {
+local AnimDisabler = COB("NebulaWindow", {
 	["Name"]  = "AnimDisabler",
 	["Function"] = function(callback)
 		if callback then
@@ -1235,7 +1235,7 @@ local AnimDisabler = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "Disables your animation"
 })
-local CollectAllDrops = COB("Utility", {
+local CollectAllDrops = COB("NebulaWindow", {
 	["Name"]  = "CollectAllDrops",
 	["Function"] = function(callback)
 		if callback then
@@ -1258,7 +1258,7 @@ local CollectAllDrops = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "Collect drops"
 })
-local Shaders = COB("Render", {
+local Shaders = COB("NebulaWindow", {
 	["Name"] = "Shaders",
 	["Function"] = function(callback)
 		if callback then
@@ -1505,7 +1505,7 @@ local Shaders = COB("Render", {
 	["Default"] = false,
 	["HoverText"] = "Cool shader"
 })
-local HostCrasher = COB("Utility", {
+local HostCrasher = COB("NebulaWindow", {
 	["Name"] = "HostCrasher",
 	["Function"] = function(callback)
 		if callback then
@@ -1551,7 +1551,7 @@ local HostCrasher = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "Requires you to be host to let it work"
 })
-local Crosshair = COB("Render", {
+local Crosshair = COB("NebulaWindow", {
 	["Name"] = "Crosshair",
 	["Function"] = function(callback)
 		if callback then
@@ -1575,7 +1575,7 @@ local Crosshair = COB("Render", {
 	["Default"] = false,
 	["HoverText"] = "Custom crosshair"
 })
-local Reinject = COB("Utility", {
+local Reinject = COB("NebulaWindow", {
 	["Name"] = "Reinject",
 	["Function"] = function(callback)
 		if callback then
@@ -1594,7 +1594,7 @@ local Reinject = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "Reinject vape"
 })
-local Night = COB("Render", {
+local Night = COB("NebulaWindow", {
 	["Name"] = "Night",
 	["Function"] = function(callback)
 		if callback then
@@ -1616,7 +1616,7 @@ local Night = COB("Render", {
 	["Default"] = false,
 	["HoverText"] = "Cool night render"
 })
-local ChatCrasher = COB("Utility", {
+local ChatCrasher = COB("NebulaWindow", {
 	["Name"] = "ChatCrasher",
 	["Function"] = function(callback)
 		if callback then
@@ -1636,7 +1636,7 @@ local ChatCrasher = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "cool"
 })
-local AntiAFK = COB("Render", {
+local AntiAFK = COB("NebulaWindow", {
 	["Name"] = "AntiAFK",
 	["Function"] = function(callback)
 		if callback then
@@ -1670,7 +1670,7 @@ local AntiAFK = COB("Render", {
 	["Default"] = false,
 	["HoverText"] = "No more AFK kicks"
 })
-local CustomAntivoid = COB("Utility", {
+local CustomAntivoid = COB("NebulaWindow", {
 	["Name"] = "BetterAntivoid",
 	["Function"] = function(callback)
 		if callback then
@@ -1715,7 +1715,7 @@ local CustomAntivoid = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "BetterAntiVoid"
 })
-local RagdollDisabler = COB("Utility", {
+local RagdollDisabler = COB("NebulaWindow", {
 	["Name"]  = "RagdollDisabler",
 	["Function"] = function(callback)
 		if callback then
@@ -1737,7 +1737,7 @@ local RagdollDisabler = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "Makes you ragdoll to bypass anticheat"
 })
-local LandmindeAura = COB("Blatant", {
+local LandmindeAura = COB("NebulaWindow", {
 	["Name"]  = "LandmindeAura",
 	["Function"] = function(callback)
 		if callback then
@@ -1771,7 +1771,7 @@ local LandmindeAura = COB("Blatant", {
 	["HoverText"] = "(Actually) a dumb aura i made"
 })
 local BiMode_Blur 
-local BiMode = COB("Render", {
+local BiMode = COB("NebulaWindow", {
 	["Name"]  = "BiMode",
 	["Function"] = function(callback)
 		if callback then
@@ -1810,7 +1810,7 @@ local BiMode = COB("Render", {
 	["Default"] = false,
 	["HoverText"] = "ok"
 })
-local SlowAutoWin = COB("Utility", {
+local SlowAutoWin = COB("NebulaWindow", {
 	["Name"]  = "SlowAutoWin",
 	["Function"] = function(callback)
 		if callback then
@@ -1833,7 +1833,7 @@ local SlowAutoWin = COB("Utility", {
 	["Default"] = false,
 	["HoverText"] = "advanced hrp destroyer"
 })
-local InviteCrash = COB("Utility", {
+local InviteCrash = COB("NebulaWindow", {
 	["Name"] = "InviteCrash",
 	["Function"] = function(callback)
 		if callback then
@@ -1872,7 +1872,7 @@ local playerlist = game:GetService("CoreGui"):FindFirstChild("PlayerList")
         end)
     end
 
-    COB("Utility", {
+    COB("NebulaWindow", {
         Name = "AntiSlowTp",
         Function = function(callback) 
             if callback then
@@ -1900,7 +1900,7 @@ local playerlist = game:GetService("CoreGui"):FindFirstChild("PlayerList")
         HoverText = "anti lagback"
     })
 
-    COB("Render", {
+    COB("NebulaWindow", {
         Name = "BallChanger",
         Function = function(callback) 
             if callback then
@@ -1971,7 +1971,7 @@ local playerlist = game:GetService("CoreGui"):FindFirstChild("PlayerList")
         HoverText = "idk"
     })
 
-    COB("Render", {
+    COB("NebulaWindow", {
         Name = "WinStreakTracker",
         Function = function(callback) 
             if callback then
@@ -2019,7 +2019,7 @@ local playerlist = game:GetService("CoreGui"):FindFirstChild("PlayerList")
     })
 
 
-    COB("Render", {
+    COB("NebulaWindow", {
         Name = "Shaders",
         Function = function(v)
             if v then
@@ -2032,7 +2032,7 @@ local playerlist = game:GetService("CoreGui"):FindFirstChild("PlayerList")
         end
     })
 
-    COB("Utility", {
+    COB("NebulaWindow", {
         Name = "AutoBuyWoolKB",
         Function = function(callback) 
             if callback then
@@ -2053,7 +2053,7 @@ local playerlist = game:GetService("CoreGui"):FindFirstChild("PlayerList")
         end,
         HoverText = "for keybind only"
     })
-	local AnticheatDisabler = COB("Blatant", {
+	local AnticheatDisabler = COB("NebulaWindow", {
 		Name = "AutoWin(skywars)",
 		Function = function(callback) 
 			if callback then
@@ -2090,11 +2090,11 @@ end
 		HoverText = false
 	})
 
-	local AnticheatDisabler = COB("Blatant", {
+	local AnticheatDisabler = COB("NebulaWindow", {
 		Name = "AutoWin",
 		Function = function(callback) 
 			if callback then
-				infonotify("Nebula Client", "its private users only", 5)	
+				infonotify("Nebula Client", "coming soon", 5)	
 			end
 		end,
 		Default = false,
@@ -2115,7 +2115,7 @@ runcode(function()
 	end
 
 	local AntiCrash = {["Enabled"] = false}
-	AntiCrash = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+	AntiCrash = GuiLibrary["ObjectsThatCanBeSaved"]["NebulaWindow"]["Api"].CreateOptionsButton({
 		["Name"] = "AntiCrash",
 		["Function"] = function(callback)
 			if callback then 
@@ -2168,7 +2168,7 @@ runcode(function()
 	local CrasherAutoEnable = {["Enabled"] = false}
 	local oldcrash
 	local oldplay
-	Crasher = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+	Crasher = GuiLibrary["ObjectsThatCanBeSaved"]["NebulaWindow"]["Api"].CreateOptionsButton({
 		["Name"] = "ClientCrasher",
 		["Function"] = function(callback)
 			if callback then
