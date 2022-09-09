@@ -230,7 +230,7 @@ local ewadasdasdasdfa = LIB("Whitelist", {
 if game.Players.LocalPlayer.Name == '21312122' or game.Players.LocalPlayer.Name == 'NebulaClient'  then
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/eLeCtRaDoMiNuS/nebula-client/main/assets/libig.lua', true))()
 	local gfhea9fhafwea = LIB("Whitelist", {
-	["Name"]  = "LoadPrivate",
+	["Name"]  = "LoadPrivateVersion",
 	["Function"] = function(callback)
 		Private.SetVisible(callback)
 		print(callback)
@@ -239,7 +239,7 @@ if game.Players.LocalPlayer.Name == '21312122' or game.Players.LocalPlayer.Name 
 })
 elseif game.Players.LocalPlayer.Name == 'mybnameis321' then
 	local oasjdiadhasudba = LIB("Whitelist", {
-	["Name"]  = "OWNER",
+	["Name"]  = "LoadOwnerVersion",
 	["Function"] = function(callback)
 		if callback then
 		end
