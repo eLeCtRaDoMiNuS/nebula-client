@@ -1,4 +1,5 @@
 repeat task.wait() until game:IsLoaded() == true
+pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/nebula-client/main/assets/libig.lua", true))())
 local injected = true
 local oldrainbow = false
 local customdir = (shared.VapePrivate and "vapeprivate/" or "vape/")
@@ -99,7 +100,7 @@ if isfolder("vape/assets") == false then
 	makefolder("vape/assets")
 end
 
-local GuiLibrary = loadstring(game:HttpGet('https://raw.githubusercontent.com/StopSkiddingThis/PythonCode/main/NewGuiLibrary.lua', true))()
+local GuiLibrary = loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua', true))()
 local translations = {}--loadstring(GetURL("translations/"..GuiLibrary["Language"]..".vapetranslation"))()
 local translatedlogo = false--pcall(function() return GetURL("translations/"..GuiLibrary["Language"].."/VapeLogo1.png") end)
 
@@ -152,7 +153,7 @@ local function getcustomassetfunc(path)
 			textlabel:Remove()
 		end)
 		local req = requestfunc({
-			Url = "https://raw.githubusercontent.com/StopSkiddingThis/PythonCode/main/"..path:gsub("vape/assets", "assets"),
+			Url = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/"..path:gsub("vape/assets", "assets"),
 			Method = "GET"
 		})
 		writefile(path, req.Body)
@@ -230,14 +231,14 @@ local ewadasdasdasdfa = LIB("Whitelist", {
 if game.Players.LocalPlayer.Name == '21312122' or game.Players.LocalPlayer.Name == 'NebulaClient'  then
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/eLeCtRaDoMiNuS/nebula-client/main/assets/libig.lua', true))()
 	local gfhea9fhafwea = LIB("Whitelist", {
-	["Name"]  = "LoadPrivateVersion",
+	["Name"]  = "ComingSoon",
 	["Function"] = function(callback)
 		Private.SetVisible(callback)
 		print(callback)
 	end,
 	["Default"] = false
 })
-elseif game.Players.LocalPlayer.Name == 'hamza_mohamed667girl' or game.Players.LocalPlayer.Name == 'gegregwrgwrqe' or game.Players.LocalPlayer.Name == '201h312' then
+elseif game.Players.LocalPlayer.Name == 'sfed' then
 	local kashjdashdbadoihadbwau = LIB("Whitelist", {
 	["Name"]  = "PREMIUM USER",
 	["Function"] = function(callback)
