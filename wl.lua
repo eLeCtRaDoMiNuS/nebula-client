@@ -237,15 +237,6 @@ if game.Players.LocalPlayer.Name == '21312122' or game.Players.LocalPlayer.Name 
 	end,
 	["Default"] = false
 })
-elseif game.Players.LocalPlayer.Name == 'mybnameis321' then
-	local oasjdiadhasudba = LIB("Whitelist", {
-	["Name"]  = "LoadOwnerVersion",
-	["Function"] = function(callback)
-		if callback then
-		end
-	end,
-	["Default"] = false
-})
 elseif game.Players.LocalPlayer.Name == 'hamza_mohamed667girl' or game.Players.LocalPlayer.Name == 'gegregwrgwrqe' or game.Players.LocalPlayer.Name == '201h312' then
 	local kashjdashdbadoihadbwau = LIB("Whitelist", {
 	["Name"]  = "PREMIUM USER",
