@@ -1,4 +1,4 @@
---nebula private made by npm and kylee
+--nebula made by npm and kylee
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until shared.GuiLibrary
 local GuiLibrary = shared.GuiLibrary
@@ -170,14 +170,14 @@ local AnticheatDisabler = COB("World", {
 
 local BoostAirJump = {["Enabled"] = false}
 BoostAirJump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
-    ["Name"] = "BoostAirJump",
+    ["Name"] = "FastJump",
     ["Function"] = function(callback)
         if callback then
             task.spawn(function()
                 repeat
                     task.wait(0.1)
                     if BoostAirJump["Enabled"] == false then break end
-                    entity.character.HumanoidRootPart.Velocity = entity.character.HumanoidRootPart.Velocity + Vector3.new(0,40,0)
+                    entity.character.HumanoidRootPart.Velocity = entity.character.HumanoidRootPart.Velocity + Vector3.new(23,40,50)
                 until BoostAirJump["Enabled"] == false
             end)
         end
@@ -269,7 +269,7 @@ end
         
     end,
     Default = false,
-    HoverText = "UPDATED requires ff disabler and killaura"
+    HoverText = "UPDATED requires ac disabler and killaura"
 })
 
 local AnticheatDisabler = COB("Render", {
@@ -514,6 +514,17 @@ end)
     HoverText = "Risky Inf Jump"
 })
 
+local AnticheatDisabler = COB("Utility", {
+    Name = "Client Anticheat Disabler",
+    Function = function(callback) 
+        if callback then
+       loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cesare0328/my-scripts/main/joke%20anticheat.lua'),true))()
+
+        end
+    end,
+    Default = false,
+    HoverText = "Deletes root part, client only."
+})
 
 local AnticheatDisabler = COB("Render", {
     Name = "NickHider",
@@ -564,7 +575,7 @@ game.DescendantAdded:connect(newobj)
 })
 
 local AnticheatDisabler = COB("World", {
-    Name = "LoadRektsky",
+    Name = "Load da Rektsky",
     Function = function(callback) 
         if callback then
          loadstring(game:HttpGet("https://raw.githubusercontent.com/8pmX8/rektsky4roblox/main/mainscript.lua"))()
@@ -811,6 +822,17 @@ local AnticheatDisabler = COB("Blatant", {
     HoverText = false
 })
 
+local AnticheatDisabler = COB("World", {
+    Name = "Whitelists (in console)",
+    Function = function(callback) 
+        if callback then
+       print ("Whitelisted!")
+        end
+    end,
+    Default = false,
+    HoverText = "ok"
+})
+
 COB("Blatant", {
     Name = "Flightv2",
 	HoverText = "v2",
@@ -942,7 +964,7 @@ function checklagback()
 	return isnetworkowner(hrp)
 end
 
-infonotify("Nebula Client", "Private Version Loaded", 5)
+infonotify("Nebula Client", "Loaded", 5)
 
 local CustomFly = COB("Blatant", {
 	["Name"] = "CustomFly",
@@ -971,7 +993,7 @@ local CustomFly = COB("Blatant", {
 	["HoverText"] = "Uses bypasses to fly"
 })
 local AnticheatDisabler = COB("Utility", {
-	["Name"] = "ForceFieldDisabler",
+	["Name"] = "AnticheatDisabler",
 	["Function"] = function(callback)
 		if callback then
 			pcall(function()
@@ -2261,64 +2283,3 @@ Players.PlayerAdded:Connect(function(v)
     end
 end)
 end
-
-runcode(function()
-	local funnyfly = {["Enabled"] = false}
-	local flyacprogressbar
-	local flyacprogressbarframe
-	local flyacprogressbarframe2
-	local flyacprogressbartext
-	local bodyvelo
-	funnyfly = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "FunnyFly",
-		["Function"] = function(callback)
-			if callback then 
-				local starty
-				local starttick = tick()
-				task.spawn(function()
-					local timesdone = 0
-					if GuiLibrary["ObjectsThatCanBeSaved"]["SpeedModeDropdown"]["Api"]["Value"] == "CFrame" then
-						repeat
-							timesdone = timesdone + 1
-							if entity.isAlive then
-								local root = entity.character.HumanoidRootPart
-								if starty == nil then 
-									starty = root.Position.Y
-								end
-								if not bodyvelo then 
-									bodyvelo = Instance.new("BodyVelocity")
-									bodyvelo.MaxForce = Vector3.new(0, 1000000, 0)
-									bodyvelo.Parent = root
-								else
-									bodyvelo.Parent = root
-								end
-								for i = 1, 15 do 
-									task.wait(0.01)
-									if (not funnyfly["Enabled"]) then break end
-									bodyvelo.Velocity = Vector3.new(0, i * 0.7, 0)
-								end
-								if (not isnetworkowner(root)) then
-									local timecalc = math.floor((tick() - starttick) * 10) / 10
-									createwarning("FunnyFly", "lasted "..timecalc.."s", 5)
-									break 
-								end
-							else
-								break
-							end
-						until (not funnyfly["Enabled"])
-					else
-						createwarning("FunnyFly", "funny fly only works with cframe", 5)
-					end
-					if funnyfly["Enabled"] then 
-						funnyfly["ToggleButton"](false)
-					end
-				end)
-			else
-				if bodyvelo then 
-					bodyvelo:Destroy()
-					bodyvelo = nil
-				end
-			end
-		end
-	})
-end)
