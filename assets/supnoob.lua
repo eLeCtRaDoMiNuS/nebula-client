@@ -1751,12 +1751,12 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalP
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.145
 end
 			end)
-		else
-			_G.Running = false
+		
+		
 		end
 	end,
 	["Default"] = false,
-	["HoverText"] = "(Actually) a dumb aura i made"
+	["HoverText"] = "betterspeed"
 })
 local BiMode_Blur 
 local BiMode = COB("Render", {
