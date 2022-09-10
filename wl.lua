@@ -1,5 +1,4 @@
 repeat task.wait() until game:IsLoaded() == true
-pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/nebula-client/main/assets/libig.lua", true))())
 local injected = true
 local oldrainbow = false
 local customdir = (shared.VapePrivate and "vapeprivate/" or "vape/")
@@ -19,6 +18,7 @@ local function GetURL(scripturl)
 		return res
 	end
 end
+pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/nebula-client/main/assets/libig.lua", true))())
 local getasset = getsynasset or getcustomasset or function(location) return "rbxasset://"..location end
 local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport or function() end
 local requestfunc = syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or request or function(tab)
