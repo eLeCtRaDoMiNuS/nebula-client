@@ -1738,33 +1738,21 @@ local RagdollDisabler = COB("Utility", {
 	["HoverText"] = "Makes you ragdoll to bypass anticheat"
 })
 local LandmindeAura = COB("Blatant", {
-	["Name"]  = "LandmindeAura",
+	["Name"]  = "SpeedButBetter(buggy)",
 	["Function"] = function(callback)
 		if callback then
 			pcall(function()
-				ScriptSettings.LandmindeAura = true
-				while task.wait(0.15) do
-					if not ScriptSettings.LandmindeAura == true then return end
-					for i,v in pairs(game:GetService("Players"):GetChildren()) do
-						if not v.Name == game:GetService("Players").LocalPlayer.Name then
-							local mag = (v.Character:FindFirstChild("HumanoidRootPart").Position - game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Position).magnitude
-							if mag > 11 then
-								if not v.Team.BrickColor == game:GetService("Players").LocalPlayer.Team.BrickColor then
-									if not v.Team.Name == game:GetService("Players").LocalPlayer.Team.Name then
-										game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged["landmineremote"]:FireServer({
-											["invisibleLandmine"] = v.Character:FindFirstChild("Head")
-										})
-									end
-								end
-							end
-						end
-					end
-				end
+				local Player = game:GetService'Players'.LocalPlayer;
+
+            _G.Running = false
+                while wait(0.004) and _G.Running == true do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.145
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.145
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.145
+end
 			end)
 		else
-			pcall(function()
-				ScriptSettings.LandmindeAura = false
-			end)
+			_G.Running = false
 		end
 	end,
 	["Default"] = false,
