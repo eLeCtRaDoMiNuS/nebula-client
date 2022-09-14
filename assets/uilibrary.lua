@@ -2265,3 +2265,55 @@ runcode(function()
 		end
 	})
 end)
+
+Dash = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({    ["Name"] = "Item Givers", 
+    ["Function"] = function(callback)
+        if callback then
+        end
+    end,
+    ["Default"] = true,
+    ["HoverText"] = "Right Click To Wiew The ITEMS"
+})
+
+
+JadeGiver = Dash.CreateToggle({
+                ["Name"] = "Jade Hammer [FE]",
+                ["Function"] = function(callback)
+                if callback then
+for i,v in pairs(game.ReplicatedStorage.Inventories:GetChildren()) do
+if string.match(v.Name, game.Players.LocalPlayer.Name) then
+  local tobecloned = game.ReplicatedStorage.Items["jade_hammer"]:Clone()
+  tobecloned.Parent = v
+                            end
+                        end
+                    end
+                end,
+                ["HoverText"] = "Jade Giver",
+                ["Default"] = true
+            })
+        RegentGiver = Dash.CreateToggle({
+                ["Name"] = "Void Regent Hammer [FE]",
+                ["Function"] = function(callback)
+                if callback then
+for i,v in pairs(game.ReplicatedStorage.Inventories:GetChildren()) do
+if string.match(v.Name, game.Players.LocalPlayer.Name) then
+  local tobecloned = game.ReplicatedStorage.Items["void_axe"]:Clone()
+  tobecloned.Parent = v
+                            end
+                        end
+                    end
+                end,
+                ["Default"] = true
+            })
+
+
+
+            PLRCRSHER = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({    ["Name"] = "Player Crasher", 
+            ["Function"] = function(callback)
+                if callback then
+                end
+            end,
+            ["Default"] = true,
+            ["HoverText"] = "Right Click To Wiew The ITEMS"
+        })
+end)
